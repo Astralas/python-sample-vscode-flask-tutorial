@@ -19,10 +19,11 @@ strategy:
       python.version: '3.10'
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '$(python.version)'
-  displayName: 'Use Python $(python.version)'
+# For the Dan-POC agent, Python 3.10 is installed on WSL already
+# - task: UsePythonVersion@0
+#   inputs:
+#     versionSpec: '$(python.version)'
+#   displayName: 'Use Python $(python.version)'
 
 - script: |
     python -m pip install --upgrade pip
